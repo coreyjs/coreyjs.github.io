@@ -21,6 +21,8 @@ init() {
   else
     # _no_branch=true
     # git branch -D "$PAGES_BRANCH"
+    git config --global user.name "GitHub Actions"
+    git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
     git checkout -b "tmp"
     git add .
     git commit -m "build"
