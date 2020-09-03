@@ -11,7 +11,7 @@
 # © 2020 Cotes Chung
 # MIT Licensed
 
-DEST=_site
+DEST=docs
 URL_IGNORE=cdn.jsdelivr.net
 
 bundle exec htmlproofer $DEST \
