@@ -21,6 +21,7 @@ init() {
   else
     # _no_branch=true
     # git branch -D "$PAGES_BRANCH"
+    git add .
     git stash
     git checkout "$PAGES_BRANCH"
     git stash pop
