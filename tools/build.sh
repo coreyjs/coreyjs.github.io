@@ -14,7 +14,7 @@ WORK_DIR="$(dirname "$(dirname "$(realpath "$0")")")"
 
 CONTAINER="${WORK_DIR}/.container"
 
-DEST="${WORK_DIR}/_site"
+DEST="${WORK_DIR}/docs"
 
 
 _help() {
@@ -36,7 +36,7 @@ _init() {
     rm -rf "$CONTAINER"
   fi
 
-  if [[ -d "_site" ]]; then
+  if [[ -d "docs" ]]; then
     jekyll clean
   fi
 
