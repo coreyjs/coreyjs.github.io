@@ -21,10 +21,11 @@ init() {
   else
     # _no_branch=true
     # git branch -D "$PAGES_BRANCH"
+    git checkout -b "tmp"
     git add .
-    git stash
+    git commit -m "build"
     git checkout "$PAGES_BRANCH"
-    git stash pop
+    git merge "tmp"
     #git stash
   fi
 }
