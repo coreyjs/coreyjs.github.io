@@ -19,9 +19,9 @@ init() {
     _no_branch=true
     git checkout -b "$PAGES_BRANCH"
   else
-    _no_branch=true
-    git branch -D "$PAGES_BRANCH"
-    git checkout -b "$PAGES_BRANCH"
+    # _no_branch=true
+    # git branch -D "$PAGES_BRANCH"
+    git checkout "$PAGES_BRANCH"
   fi
 }
 
