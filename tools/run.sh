@@ -35,7 +35,7 @@ _help() {
 }
 
 _cleanup() {
-  if [[ -d _site || -d .jekyll-cache ]]; then
+  if [[ -d docs || -d .jekyll-cache ]]; then
     jekyll clean
   fi
 
