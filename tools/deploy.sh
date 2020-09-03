@@ -20,7 +20,7 @@ init() {
     git checkout -b "$PAGES_BRANCH"
   else
     _no_branch=true
-    git branch -d "$PAGES_BRANCH"
+    git branch -D "$PAGES_BRANCH"
     git checkout -b "$PAGES_BRANCH"
   fi
 }
@@ -44,7 +44,7 @@ flush() {
   mv "$_backup_dir"/* .
 }
 
-deoply() {
+deploy() {
   git config --global user.name "GitHub Actions"
   git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
@@ -63,7 +63,7 @@ main() {
   init
   backup
   flush
-  deoply
+  deploy
 }
 
 main
