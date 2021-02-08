@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="container">
+      <img src="{{ site.author.thumb | prepend: site.baseurl }}" alt="author thumb" class="dot" width="200" height="200">
+      <h1>Hello From Buffalo, NY</h1>
+      <h3>I'm <strong itemprop="name">{{ site.author.name }}</strong>, a <em itemprop="jobTitle">{{ site.author.job }}</em>.</h3>
+      <h3>{{ site.author.bio }}</h3>
+      <a href="{{ '/about' | prepend: site.baseurl }}" class="button button-ghost" title="about">about</a>
+      <a href="https://dev.to/coreyjs" class="button button-ghost" title="blog">blog</a>
+      <a href="https://medium.com/@cschaf" class="button button-ghost" title="Medium">medium</a>
+      <a href="https://coreyjs.artstation.com/" class="button button-ghost" title="Art Station">art station</a>
+      {% include social.html %}
+    </div>
+  </div>
+</section>
